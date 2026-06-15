@@ -12,7 +12,12 @@ function TodoItem({ todoItem, handleChangeCheckbox, deleteTodoItemFromList }) {
   }
   return (
     <div>
-      <Checkbox todoItem={todoItem} handleChangeCheckbox={handleChangeCheckboxEvent} />
+      <Checkbox
+        id={todoItem.id}
+        checked={todoItem.done}
+        content={todoItem.content}
+        handleChangeCheckbox={handleChangeCheckboxEvent}
+      />
       <Button buttonValue={"Löschen"} handleButtonClickEvent={handleDeleteTodoItem} />
     </div>
   );

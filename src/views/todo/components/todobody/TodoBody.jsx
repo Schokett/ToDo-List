@@ -7,6 +7,7 @@ function TodoBody({ todos, handleChangeCheckbox, deleteTodoItemFromList }) {
         return (
           <TodoItem
             todoItem={todo}
+            key={todo.id}
             handleChangeCheckbox={handleChangeCheckbox}
             deleteTodoItemFromList={deleteTodoItemFromList}
           />
