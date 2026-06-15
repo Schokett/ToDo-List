@@ -1,9 +1,20 @@
 import "./Checkbox.scss";
-function Checkbox() {
+function Checkbox({ todoItem, handleChangeCheckbox }) {
+  function handleChangeCheckboxEvent(event) {
+    const updatedTodoItem = { ...todoItem };
+    updatedTodoItem.done = event.target.checked;
+    handleChangeCheckbox(updatedTodoItem);
+  }
+
   return (
     <div>
-      <input id="1" type="checkbox" />
-      <label for="1">Test</label>
+      <input
+        id={todoItem.id}
+        type="checkbox"
+        checked={todoItem.done}
+        onChange={handleChangeCheckboxEvent}
+      />
+      <label for="1">{todoItem.content}</label>
     </div>
   );
 }
