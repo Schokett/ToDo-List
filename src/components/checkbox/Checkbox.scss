@@ -1,0 +1,47 @@
+@import "../../../src/App.scss";
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0.5rem;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+
+  background-color: #ffffff;
+  border: 3px solid $border-color;
+  border-radius: 4px;
+
+  position: relative;
+
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    border-color: $primary-color;
+    box-shadow: 0 0 5px rgba($primary-color, 0.2);
+  }
+
+  &:checked {
+    background-color: $primary-color;
+    border-color: $primary-color;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 35%;
+      top: 10%;
+      width: 25%;
+      height: 55%;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid rgba($primary-color, 0.5);
+    outline-offset: 2px;
+  }
+}

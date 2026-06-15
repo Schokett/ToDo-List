@@ -1,4 +1,6 @@
+import TodoItem from "./components/todoitem/TodoItem";
+
 function Todo() {
-  return <div>Hallo</div>;
+  return <TodoItem />;
 }
 export default Todo;
