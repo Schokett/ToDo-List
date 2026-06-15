@@ -1,18 +1,14 @@
 import Checkbox from "../../../../components/checkbox/Checkbox";
 import Button from "../../../../components/button/Button";
 
-//function TodoItem(infoObject)
-//console.log(infoObject.weatherData, infoObject.id,infoObject.content) // {temp: 10}, 1, Mannheim
-function TodoItem({ todoItem, handleChangeCheckbox }) {
-  // { todoItem: {...}, handleChangeCheckbox: ... }
-  //function TodoItem({ TodoItem, handleChangeCheckbox }) {
-
-  console.log("TODOITEM", todoItem);
+function TodoItem({ todoItem, handleChangeCheckbox, deleteTodoItemFromList }) {
+  function handleDeleteTodoItem() {
+    deleteTodoItemFromList(todoItem.id);
+  }
   return (
-    //<p>{todoItem.content}</p>
-    <div className="HAllo">
+    <div>
       <Checkbox todoItem={todoItem} handleChangeCheckbox={handleChangeCheckbox} />
-      <Button />
+      <Button buttonValue={"Löschen"} handleButtonClickEvent={handleDeleteTodoItem} />
     </div>
   );
 }

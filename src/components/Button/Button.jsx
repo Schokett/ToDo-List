@@ -1,5 +1,5 @@
 import "./Button.scss";
-function Button() {
-  return <button>Hallo</button>;
+function Button({ buttonValue, handleButtonClickEvent }) {
+  return <button onClick={handleButtonClickEvent}>{buttonValue}</button>;
 }
 export default Button;
