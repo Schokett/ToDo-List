@@ -9,14 +9,7 @@ $font-color: white;
 }
 html,
 body {
-  background-image: linear-gradient(
-    to top,
-    #c5dac4,
-    // Mattes Salbei-Grau
-    #eef2ee,
-    // Ganz zartes Hellgrau-Grün
-    #f2e7f3 // Reinweiß oben
-  );
+  background-image: linear-gradient(to top, #c5dac4, #eef2ee, #f2e7f3);
   margin: 0;
   padding: 0;
   min-height: 100vh;
