@@ -1,5 +1,6 @@
 $primary-color: rgb(231, 14, 130);
-$secend-color: #f8f8f8;
+$secend-color: rgba(155, 87, 123, 0.274);
+$font-color: white;
 
 * {
   padding: 0;
@@ -8,7 +9,14 @@ $secend-color: #f8f8f8;
 }
 html,
 body {
-  background-image: linear-gradient(to top, #04601c, #398320, #69a620, #9ec91b, #d9eb12);
+  background-image: linear-gradient(
+    to top,
+    #c5dac4,
+    // Mattes Salbei-Grau
+    #eef2ee,
+    // Ganz zartes Hellgrau-Grün
+    #ffffff // Reinweiß oben
+  );
   margin: 0;
   padding: 0;
   min-height: 100vh;

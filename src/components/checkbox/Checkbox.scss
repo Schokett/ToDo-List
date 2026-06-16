@@ -9,13 +9,10 @@ input[type="checkbox"] {
   display: inline-block;
   vertical-align: middle;
   cursor: pointer;
-
   background-color: #ffffff;
-  border: 3px solid $primary-color;
+  border: 3px solid $secend-color;
   border-radius: 4px;
-
   position: relative;
-
   transition: all 0.2s ease-in-out;
 
   &:hover {
@@ -34,7 +31,7 @@ input[type="checkbox"] {
       top: 10%;
       width: 25%;
       height: 55%;
-      border: solid white;
+      border: solid rgb(255, 255, 255);
       border-width: 0 2px 2px 0;
       transform: rotate(45deg);
     }
@@ -50,25 +47,18 @@ input[type="checkbox"] {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-
-  // 1. Das hier sorgt dafür, dass die Checkbox den Platz einnimmt,
-  // den sie in der Todo-Card übrig hat, bevor der Löschen-Button kommt.
   flex: 1;
   min-width: 0;
 
   input[type="checkbox"] {
-    // 2. Deine Box bleibt immer exakt gleich groß und wird nicht zerquetscht
     flex-shrink: 0;
     width: 1.25em;
     height: 1.25em;
   }
 
   .todo-text {
-    // 3. Der Text bekommt den gesamten restlichen Platz
     flex: 1;
     min-width: 0;
-
-    // 4. 🔥 DIE RETTUNG: Der Umbruch bei langen Wörtern
     overflow-wrap: break-word;
     word-break: break-word;
   }
