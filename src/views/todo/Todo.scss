@@ -8,4 +8,13 @@
   border-radius: 18px;
   padding: 1rem;
   margin: 4rem auto;
+  box-shadow:
+    0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+@media screen and (min-width: 700px) {
+  .Todo-Container {
+    width: 1000px;
+  }
 }
