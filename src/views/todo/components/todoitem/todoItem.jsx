@@ -1,5 +1,6 @@
 import Checkbox from "../../../../components/checkbox/Checkbox";
 import Button from "../../../../components/button/Button";
+import "./TodoItem.scss";
 
 function TodoItem({ todoItem, handleChangeCheckbox, deleteTodoItemFromList }) {
   function handleDeleteTodoItem() {
@@ -11,8 +12,9 @@ function TodoItem({ todoItem, handleChangeCheckbox, deleteTodoItemFromList }) {
     handleChangeCheckbox(updatedTodoItem);
   }
   return (
-    <div>
+    <div className="Todo-card">
       <Checkbox
+        className="cutom-checkbox"
         id={todoItem.id}
         checked={todoItem.done}
         content={todoItem.content}

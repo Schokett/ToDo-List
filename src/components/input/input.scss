@@ -1,4 +1,11 @@
+@import "../../App.scss";
+
 input {
   padding: 0.2rem;
   border-radius: 8px;
+  border: 2px solid white;
+
+  &:focus {
+    outline: 2px solid $primary-color;
+  }
 }
