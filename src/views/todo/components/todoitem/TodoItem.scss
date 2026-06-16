@@ -17,3 +17,8 @@
     align-items: center;
   }
 }
+@media screen and (min-width: 700px) {
+  .Todo-card {
+    width: 900px;
+  }
+}
