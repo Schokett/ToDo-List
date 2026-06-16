@@ -3,7 +3,9 @@ import TodoBody from "../todobody/TodoBody";
 import { useState } from "react";
 
 function TodoList({}) {
-  const [todos, setTodos] = useState([{ id: Math.random(), content: "Waschen", done: true }]);
+  const [todos, setTodos] = useState([
+    { id: Math.random(), content: "Erste Todo Aufgabe", done: true },
+  ]);
 
   function handleChangeCheckbox(todoItem) {
     const todoItemIndex = todos.findIndex((todo) => todo.id === todoItem.id);
