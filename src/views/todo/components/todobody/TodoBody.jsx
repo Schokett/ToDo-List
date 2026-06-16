@@ -1,6 +1,13 @@
 import TodoItem from "../todoitem/TodoItem";
+import "./TodoBody.scss";
 
 function TodoBody({ todos, handleChangeCheckbox, deleteTodoItemFromList }) {
+  function showNoTodoItems() {
+    if (todos.length === 0) {
+      return <p>Keine Todo's vorhanden</p>;
+    }
+  }
+
   return (
     <div>
       {todos.map((todo) => {
@@ -13,6 +20,7 @@ function TodoBody({ todos, handleChangeCheckbox, deleteTodoItemFromList }) {
           />
         );
       })}
+      <div className="no-todos-container">{showNoTodoItems()}</div>
     </div>
   );
 }
